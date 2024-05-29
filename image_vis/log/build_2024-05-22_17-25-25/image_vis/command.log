@@ -1,0 +1,2 @@
+Invoking command in '/home/vlad/ros2_ws/image_vis/build/image_vis': /usr/bin/cmake /home/vlad/ros2_ws/image_vis -DCMAKE_INSTALL_PREFIX=/home/vlad/ros2_ws/image_vis/install/image_vis
+Invoked command in '/home/vlad/ros2_ws/image_vis/build/image_vis' returned '1': /usr/bin/cmake /home/vlad/ros2_ws/image_vis -DCMAKE_INSTALL_PREFIX=/home/vlad/ros2_ws/image_vis/install/image_vis

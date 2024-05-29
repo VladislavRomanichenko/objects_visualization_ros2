@@ -1,0 +1,144 @@
+[0.000000] (-) TimerEvent: {}
+[0.000660] (image_vis) JobQueued: {'identifier': 'image_vis', 'dependencies': OrderedDict()}
+[0.000890] (image_vis) JobStarted: {'identifier': 'image_vis'}
+[0.013370] (image_vis) JobProgress: {'identifier': 'image_vis', 'progress': 'cmake'}
+[0.014168] (image_vis) JobProgress: {'identifier': 'image_vis', 'progress': 'build'}
+[0.015144] (image_vis) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vlad/ros2_ws/image_vis/build/image_vis', '--', '-j4', '-l4'], 'cwd': '/home/vlad/ros2_ws/image_vis/build/image_vis', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://192.168.200.1:4080/'), ('no_proxy', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('LANGUAGE', 'ru:en'), ('USER', 'vlad'), ('LC_TIME', 'ru_RU.UTF-8'), ('SSH_AGENT_PID', '1705'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/vlad'), ('OLDPWD', '/home/vlad/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('MANAGERPID', '1609'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://192.168.200.1:4080/'), ('COLCON_PREFIX_PATH', '/home/vlad/ros2_ws/image_vis/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'vlad'), ('http_proxy', 'http://192.168.200.1:4080/'), ('JOURNAL_STREAM', '8:37883'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/vlad-System-Product-Name:@/tmp/.ICE-unix/1740,unix/vlad-System-Product-Name:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '100b130c5dee45268953e321a6e1e060'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f46b3cfd_dc55_403d_b384_36f053c459ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'ru_RU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vlad/ros2_ws/image_vis/install/image_vis:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/ros2_ws/image_vis/build/image_vis'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/galactic/lib/python3.8/site-packages'), ('HTTP_PROXY', 'http://192.168.200.1:4080/'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/vlad/ros2_ws/image_vis/install/image_vis:/opt/ros/galactic')]), 'shell': False}
+[0.070366] (image_vis) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target image_viewer_node\x1b[0m\n'}
+[0.099750] (-) TimerEvent: {}
+[0.142597] (image_vis) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/image_viewer_node.dir/src/image_viewer_node.cpp.o\x1b[0m\n'}
+[0.199872] (-) TimerEvent: {}
+[0.300168] (-) TimerEvent: {}
+[0.400556] (-) TimerEvent: {}
+[0.500824] (-) TimerEvent: {}
+[0.601562] (-) TimerEvent: {}
+[0.701822] (-) TimerEvent: {}
+[0.802087] (-) TimerEvent: {}
+[0.902335] (-) TimerEvent: {}
+[1.002761] (-) TimerEvent: {}
+[1.103918] (-) TimerEvent: {}
+[1.204353] (-) TimerEvent: {}
+[1.305141] (-) TimerEvent: {}
+[1.405581] (-) TimerEvent: {}
+[1.506002] (-) TimerEvent: {}
+[1.606374] (-) TimerEvent: {}
+[1.706775] (-) TimerEvent: {}
+[1.807153] (-) TimerEvent: {}
+[1.907606] (-) TimerEvent: {}
+[2.007982] (-) TimerEvent: {}
+[2.108250] (-) TimerEvent: {}
+[2.208516] (-) TimerEvent: {}
+[2.308974] (-) TimerEvent: {}
+[2.409396] (-) TimerEvent: {}
+[2.510151] (-) TimerEvent: {}
+[2.610521] (-) TimerEvent: {}
+[2.710962] (-) TimerEvent: {}
+[2.811356] (-) TimerEvent: {}
+[2.911756] (-) TimerEvent: {}
+[2.975008] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:57:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.975368] (image_vis) StderrLine: {'line': b'   57 |     (\x1b[01;35m\x1b[K31\x1b[m\x1b[K, 119, 180),   // tab:blue\n'}
+[2.975444] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.975508] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:57:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.975573] (image_vis) StderrLine: {'line': b'   57 |     (31, 119, \x1b[01;35m\x1b[K180\x1b[m\x1b[K),   // tab:blue\n'}
+[2.977052] (image_vis) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.977179] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:58:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.977245] (image_vis) StderrLine: {'line': b'   58 |     (\x1b[01;35m\x1b[K255\x1b[m\x1b[K, 127, 14),   // tab:orange\n'}
+[2.977304] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.977362] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:58:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.977427] (image_vis) StderrLine: {'line': b'   58 |     (255, 127, \x1b[01;35m\x1b[K14\x1b[m\x1b[K),   // tab:orange\n'}
+[2.977484] (image_vis) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.977540] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:59:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.977597] (image_vis) StderrLine: {'line': b'   59 |     (\x1b[01;35m\x1b[K44\x1b[m\x1b[K, 160, 44),    // tab:green\n'}
+[2.977653] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.977709] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:59:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.977766] (image_vis) StderrLine: {'line': b'   59 |     (44, 160, \x1b[01;35m\x1b[K44\x1b[m\x1b[K),    // tab:green\n'}
+[2.977823] (image_vis) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.977884] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:60:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.977941] (image_vis) StderrLine: {'line': b'   60 |     (\x1b[01;35m\x1b[K214\x1b[m\x1b[K, 39, 40),    // tab:red\n'}
+[2.978025] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.978080] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:60:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.978136] (image_vis) StderrLine: {'line': b'   60 |     (214, 39, \x1b[01;35m\x1b[K40\x1b[m\x1b[K),    // tab:red\n'}
+[2.978193] (image_vis) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.978248] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:61:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.978305] (image_vis) StderrLine: {'line': b'   61 |     (\x1b[01;35m\x1b[K148\x1b[m\x1b[K, 103, 189),  // tab:purple\n'}
+[2.978360] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.978415] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:61:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.978471] (image_vis) StderrLine: {'line': b'   61 |     (148, 103, \x1b[01;35m\x1b[K189\x1b[m\x1b[K),  // tab:purple\n'}
+[2.978525] (image_vis) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.978581] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:62:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.978637] (image_vis) StderrLine: {'line': b'   62 |     (\x1b[01;35m\x1b[K140\x1b[m\x1b[K, 86, 75),    // tab:brown\n'}
+[2.978692] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.978747] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:62:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.978803] (image_vis) StderrLine: {'line': b'   62 |     (140, 86, \x1b[01;35m\x1b[K75\x1b[m\x1b[K),    // tab:brown\n'}
+[2.978865] (image_vis) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.978920] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:63:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.978981] (image_vis) StderrLine: {'line': b'   63 |     (\x1b[01;35m\x1b[K227\x1b[m\x1b[K, 119, 194),  // tab:pink\n'}
+[2.979036] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.979091] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:63:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.979148] (image_vis) StderrLine: {'line': b'   63 |     (227, 119, \x1b[01;35m\x1b[K194\x1b[m\x1b[K),  // tab:pink\n'}
+[2.979203] (image_vis) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.979259] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:64:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.979320] (image_vis) StderrLine: {'line': b'   64 |     (\x1b[01;35m\x1b[K127\x1b[m\x1b[K, 127, 127),  // tab:gray\n'}
+[2.979380] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.979435] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:64:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.979491] (image_vis) StderrLine: {'line': b'   64 |     (127, 127, \x1b[01;35m\x1b[K127\x1b[m\x1b[K),  // tab:gray\n'}
+[2.979550] (image_vis) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.979607] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:65:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.979665] (image_vis) StderrLine: {'line': b'   65 |     (\x1b[01;35m\x1b[K188\x1b[m\x1b[K, 189, 34),   // tab:olive\n'}
+[2.979721] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.979777] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:65:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.979834] (image_vis) StderrLine: {'line': b'   65 |     (188, 189, \x1b[01;35m\x1b[K34\x1b[m\x1b[K),   // tab:olive\n'}
+[2.979889] (image_vis) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.979943] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:66:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.979999] (image_vis) StderrLine: {'line': b'   66 |     (\x1b[01;35m\x1b[K23\x1b[m\x1b[K, 190, 207),   // tab:cyan\n'}
+[2.980054] (image_vis) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.980110] (image_vis) StderrLine: {'line': b'\x1b[01m\x1b[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:66:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.980166] (image_vis) StderrLine: {'line': b'   66 |     (23, 190, \x1b[01;35m\x1b[K207\x1b[m\x1b[K),   // tab:cyan\n'}
+[2.980249] (image_vis) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.011879] (-) TimerEvent: {}
+[3.112262] (-) TimerEvent: {}
+[3.212509] (-) TimerEvent: {}
+[3.312819] (-) TimerEvent: {}
+[3.413210] (-) TimerEvent: {}
+[3.513635] (-) TimerEvent: {}
+[3.613901] (-) TimerEvent: {}
+[3.714197] (-) TimerEvent: {}
+[3.814650] (-) TimerEvent: {}
+[3.920173] (-) TimerEvent: {}
+[4.020561] (-) TimerEvent: {}
+[4.120846] (-) TimerEvent: {}
+[4.221127] (-) TimerEvent: {}
+[4.321524] (-) TimerEvent: {}
+[4.422285] (-) TimerEvent: {}
+[4.443704] (image_vis) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable image_viewer_node\x1b[0m\n'}
+[4.522415] (-) TimerEvent: {}
+[4.622709] (-) TimerEvent: {}
+[4.723146] (-) TimerEvent: {}
+[4.823526] (-) TimerEvent: {}
+[4.923168] (image_vis) StdoutLine: {'line': b'[100%] Built target image_viewer_node\n'}
+[4.924732] (-) TimerEvent: {}
+[4.937064] (image_vis) CommandEnded: {'returncode': 0}
+[4.964106] (image_vis) JobProgress: {'identifier': 'image_vis', 'progress': 'install'}
+[4.978873] (image_vis) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vlad/ros2_ws/image_vis/build/image_vis'], 'cwd': '/home/vlad/ros2_ws/image_vis/build/image_vis', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://192.168.200.1:4080/'), ('no_proxy', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('LANGUAGE', 'ru:en'), ('USER', 'vlad'), ('LC_TIME', 'ru_RU.UTF-8'), ('SSH_AGENT_PID', '1705'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/vlad'), ('OLDPWD', '/home/vlad/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('MANAGERPID', '1609'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://192.168.200.1:4080/'), ('COLCON_PREFIX_PATH', '/home/vlad/ros2_ws/image_vis/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'vlad'), ('http_proxy', 'http://192.168.200.1:4080/'), ('JOURNAL_STREAM', '8:37883'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/vlad-System-Product-Name:@/tmp/.ICE-unix/1740,unix/vlad-System-Product-Name:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '100b130c5dee45268953e321a6e1e060'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f46b3cfd_dc55_403d_b384_36f053c459ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'ru_RU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vlad/ros2_ws/image_vis/install/image_vis:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/ros2_ws/image_vis/build/image_vis'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/galactic/lib/python3.8/site-packages'), ('HTTP_PROXY', 'http://192.168.200.1:4080/'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/vlad/ros2_ws/image_vis/install/image_vis:/opt/ros/galactic')]), 'shell': False}
+[4.990941] (image_vis) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.991482] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/lib/image_vis/image_viewer_node\n'}
+[4.991895] (image_vis) StdoutLine: {'line': b'-- Set runtime path of "/home/vlad/ros2_ws/image_vis/install/image_vis/lib/image_vis/image_viewer_node" to ""\n'}
+[4.992136] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/package_run_dependencies/image_vis\n'}
+[4.992317] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/parent_prefix_path/image_vis\n'}
+[4.992893] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/ament_prefix_path.sh\n'}
+[4.992961] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/ament_prefix_path.dsv\n'}
+[4.993024] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/path.sh\n'}
+[4.993087] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/path.dsv\n'}
+[4.993146] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.bash\n'}
+[4.993206] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.sh\n'}
+[4.993273] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.zsh\n'}
+[4.993386] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.dsv\n'}
+[4.993456] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/package.dsv\n'}
+[4.993519] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/packages/image_vis\n'}
+[4.993580] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/cmake/image_visConfig.cmake\n'}
+[4.993647] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/cmake/image_visConfig-version.cmake\n'}
+[4.993708] (image_vis) StdoutLine: {'line': b'-- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/package.xml\n'}
+[4.998570] (image_vis) CommandEnded: {'returncode': 0}
+[5.024902] (-) TimerEvent: {}
+[5.046251] (image_vis) JobEnded: {'identifier': 'image_vis', 'rc': 0}
+[5.046861] (-) EventReactorShutdown: {}

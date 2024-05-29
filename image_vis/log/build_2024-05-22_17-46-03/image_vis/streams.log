@@ -1,0 +1,26 @@
+[0.015s] Invoking command in '/home/vlad/ros2_ws/image_vis/build/image_vis': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/vlad/ros2_ws/image_vis/build/image_vis -- -j4 -l4
+[0.064s] [35m[1mScanning dependencies of target image_viewer_node[0m
+[0.104s] [ 50%] [32mBuilding CXX object CMakeFiles/image_viewer_node.dir/src/image_viewer_node.cpp.o[0m
+[4.327s] [100%] [32m[1mLinking CXX executable image_viewer_node[0m
+[4.798s] [100%] Built target image_viewer_node
+[4.810s] Invoked command in '/home/vlad/ros2_ws/image_vis/build/image_vis' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/vlad/ros2_ws/image_vis/build/image_vis -- -j4 -l4
+[4.847s] Invoking command in '/home/vlad/ros2_ws/image_vis/build/image_vis': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/vlad/ros2_ws/image_vis/build/image_vis
+[4.856s] -- Install configuration: ""
+[4.856s] -- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/lib/image_vis/image_viewer_node
+[4.857s] -- Set runtime path of "/home/vlad/ros2_ws/image_vis/install/image_vis/lib/image_vis/image_viewer_node" to ""
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/package_run_dependencies/image_vis
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/parent_prefix_path/image_vis
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/ament_prefix_path.sh
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/ament_prefix_path.dsv
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/path.sh
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/path.dsv
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.bash
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.sh
+[4.857s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.zsh
+[4.858s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.dsv
+[4.858s] -- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/package.dsv
+[4.858s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/packages/image_vis
+[4.858s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/cmake/image_visConfig.cmake
+[4.858s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/cmake/image_visConfig-version.cmake
+[4.858s] -- Up-to-date: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/package.xml
+[4.863s] Invoked command in '/home/vlad/ros2_ws/image_vis/build/image_vis' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/vlad/ros2_ws/image_vis/build/image_vis

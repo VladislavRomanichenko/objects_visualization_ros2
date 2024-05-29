@@ -1,0 +1,135 @@
+[0.000000] (-) TimerEvent: {}
+[0.000394] (image_vis) JobQueued: {'identifier': 'image_vis', 'dependencies': OrderedDict()}
+[0.000428] (image_vis) JobStarted: {'identifier': 'image_vis'}
+[0.009387] (image_vis) JobProgress: {'identifier': 'image_vis', 'progress': 'cmake'}
+[0.010155] (image_vis) Command: {'cmd': ['/usr/bin/cmake', '/home/vlad/ros2_ws/image_vis', '-DCMAKE_INSTALL_PREFIX=/home/vlad/ros2_ws/image_vis/install/image_vis'], 'cwd': '/home/vlad/ros2_ws/image_vis/build/image_vis', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://192.168.200.1:4080/'), ('no_proxy', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('LANGUAGE', 'ru:en'), ('USER', 'vlad'), ('LC_TIME', 'ru_RU.UTF-8'), ('SSH_AGENT_PID', '1705'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/vlad'), ('OLDPWD', '/home/vlad/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('MANAGERPID', '1609'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://192.168.200.1:4080/'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'vlad'), ('http_proxy', 'http://192.168.200.1:4080/'), ('JOURNAL_STREAM', '8:37883'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/vlad-System-Product-Name:@/tmp/.ICE-unix/1740,unix/vlad-System-Product-Name:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '100b130c5dee45268953e321a6e1e060'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f46b3cfd_dc55_403d_b384_36f053c459ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'ru_RU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/ros2_ws/image_vis/build/image_vis'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/galactic/lib/python3.8/site-packages'), ('HTTP_PROXY', 'http://192.168.200.1:4080/'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/galactic')]), 'shell': False}
+[0.027550] (image_vis) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.050226] (image_vis) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.050388] (image_vis) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099515] (-) TimerEvent: {}
+[0.120715] (image_vis) StdoutLine: {'line': b'-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[0.164867] (image_vis) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.170631] (image_vis) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[0.199636] (-) TimerEvent: {}
+[0.248769] (image_vis) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.277606] (image_vis) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/galactic/include  \n'}
+[0.299772] (-) TimerEvent: {}
+[0.354856] (image_vis) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.399893] (-) TimerEvent: {}
+[0.411457] (image_vis) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[0.413781] (image_vis) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.433339] (image_vis) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.434913] (image_vis) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.500014] (-) TimerEvent: {}
+[0.504958] (image_vis) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.505216] (image_vis) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.577183] (image_vis) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[0.577380] (image_vis) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[0.600138] (-) TimerEvent: {}
+[0.636145] (image_vis) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[0.636342] (image_vis) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[0.700220] (-) TimerEvent: {}
+[0.704485] (image_vis) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[0.705602] (image_vis) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.800308] (-) TimerEvent: {}
+[0.855141] (image_vis) StdoutLine: {'line': b'-- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)\n'}
+[0.900426] (-) TimerEvent: {}
+[0.971467] (image_vis) StdoutLine: {'line': b'-- Found cv_bridge: 3.1.3 (/opt/ros/galactic/share/cv_bridge/cmake)\n'}
+[0.999690] (image_vis) StdoutLine: {'line': b'-- Found image_transport: 2.5.1 (/opt/ros/galactic/share/image_transport/cmake)\n'}
+[1.000511] (-) TimerEvent: {}
+[1.060183] (image_vis) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.2.0") \n'}
+[1.100640] (-) TimerEvent: {}
+[1.100974] (image_vis) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)\n'}
+[1.174172] (image_vis) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.179146] (image_vis) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.179632] (image_vis) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.179749] (image_vis) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.185258] (image_vis) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.185413] (image_vis) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.186468] (image_vis) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.188237] (image_vis) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.189532] (image_vis) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.195657] (image_vis) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.195815] (image_vis) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.196911] (image_vis) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.200584] (image_vis) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.200740] (-) TimerEvent: {}
+[1.222137] (image_vis) StdoutLine: {'line': b'-- Generating done\n'}
+[1.223660] (image_vis) StdoutLine: {'line': b'-- Build files have been written to: /home/vlad/ros2_ws/image_vis/build/image_vis\n'}
+[1.231091] (image_vis) CommandEnded: {'returncode': 0}
+[1.231873] (image_vis) JobProgress: {'identifier': 'image_vis', 'progress': 'build'}
+[1.234004] (image_vis) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vlad/ros2_ws/image_vis/build/image_vis', '--', '-j4', '-l4'], 'cwd': '/home/vlad/ros2_ws/image_vis/build/image_vis', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://192.168.200.1:4080/'), ('no_proxy', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('LANGUAGE', 'ru:en'), ('USER', 'vlad'), ('LC_TIME', 'ru_RU.UTF-8'), ('SSH_AGENT_PID', '1705'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/vlad'), ('OLDPWD', '/home/vlad/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('MANAGERPID', '1609'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://192.168.200.1:4080/'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'vlad'), ('http_proxy', 'http://192.168.200.1:4080/'), ('JOURNAL_STREAM', '8:37883'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/vlad-System-Product-Name:@/tmp/.ICE-unix/1740,unix/vlad-System-Product-Name:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '100b130c5dee45268953e321a6e1e060'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f46b3cfd_dc55_403d_b384_36f053c459ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'ru_RU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/ros2_ws/image_vis/build/image_vis'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/galactic/lib/python3.8/site-packages'), ('HTTP_PROXY', 'http://192.168.200.1:4080/'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/galactic')]), 'shell': False}
+[1.275843] (image_vis) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target image_viewer_node\x1b[0m\n'}
+[1.300850] (-) TimerEvent: {}
+[1.342427] (image_vis) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/image_viewer_node.dir/src/image_viewer_node.cpp.o\x1b[0m\n'}
+[1.400972] (-) TimerEvent: {}
+[1.501356] (-) TimerEvent: {}
+[1.601641] (-) TimerEvent: {}
+[1.701903] (-) TimerEvent: {}
+[1.802175] (-) TimerEvent: {}
+[1.902541] (-) TimerEvent: {}
+[2.002835] (-) TimerEvent: {}
+[2.103253] (-) TimerEvent: {}
+[2.203553] (-) TimerEvent: {}
+[2.303854] (-) TimerEvent: {}
+[2.404171] (-) TimerEvent: {}
+[2.504467] (-) TimerEvent: {}
+[2.604753] (-) TimerEvent: {}
+[2.705041] (-) TimerEvent: {}
+[2.805332] (-) TimerEvent: {}
+[2.905632] (-) TimerEvent: {}
+[3.005934] (-) TimerEvent: {}
+[3.106229] (-) TimerEvent: {}
+[3.206518] (-) TimerEvent: {}
+[3.306810] (-) TimerEvent: {}
+[3.407104] (-) TimerEvent: {}
+[3.507388] (-) TimerEvent: {}
+[3.607674] (-) TimerEvent: {}
+[3.707962] (-) TimerEvent: {}
+[3.808218] (-) TimerEvent: {}
+[3.908505] (-) TimerEvent: {}
+[4.008793] (-) TimerEvent: {}
+[4.109083] (-) TimerEvent: {}
+[4.209364] (-) TimerEvent: {}
+[4.309652] (-) TimerEvent: {}
+[4.409941] (-) TimerEvent: {}
+[4.510197] (-) TimerEvent: {}
+[4.610491] (-) TimerEvent: {}
+[4.710773] (-) TimerEvent: {}
+[4.811056] (-) TimerEvent: {}
+[4.911347] (-) TimerEvent: {}
+[5.011642] (-) TimerEvent: {}
+[5.111939] (-) TimerEvent: {}
+[5.212216] (-) TimerEvent: {}
+[5.289079] (image_vis) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable image_viewer_node\x1b[0m\n'}
+[5.312337] (-) TimerEvent: {}
+[5.412715] (-) TimerEvent: {}
+[5.513013] (-) TimerEvent: {}
+[5.613313] (-) TimerEvent: {}
+[5.713639] (-) TimerEvent: {}
+[5.748067] (image_vis) StdoutLine: {'line': b'[100%] Built target image_viewer_node\n'}
+[5.769489] (image_vis) CommandEnded: {'returncode': 0}
+[5.794314] (image_vis) JobProgress: {'identifier': 'image_vis', 'progress': 'install'}
+[5.806962] (image_vis) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vlad/ros2_ws/image_vis/build/image_vis'], 'cwd': '/home/vlad/ros2_ws/image_vis/build/image_vis', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://192.168.200.1:4080/'), ('no_proxy', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('LANGUAGE', 'ru:en'), ('USER', 'vlad'), ('LC_TIME', 'ru_RU.UTF-8'), ('SSH_AGENT_PID', '1705'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/vlad'), ('OLDPWD', '/home/vlad/ros2_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1;192.168.*;*.nkbvs.ru;*.nkbvs.tsure.ru;*nkbvs.net'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ru_RU.UTF-8'), ('MANAGERPID', '1609'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://192.168.200.1:4080/'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'vlad'), ('http_proxy', 'http://192.168.200.1:4080/'), ('JOURNAL_STREAM', '8:37883'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vlad'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/vlad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/vlad-System-Product-Name:@/tmp/.ICE-unix/1740,unix/vlad-System-Product-Name:/tmp/.ICE-unix/1740'), ('INVOCATION_ID', '100b130c5dee45268953e321a6e1e060'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ru_RU.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f46b3cfd_dc55_403d_b384_36f053c459ac'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'ru_RU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ru_RU.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.130'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ru_RU.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ru_RU.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ru_RU.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vlad/ros2_ws/image_vis/build/image_vis'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/galactic/lib/python3.8/site-packages'), ('HTTP_PROXY', 'http://192.168.200.1:4080/'), ('LC_NUMERIC', 'ru_RU.UTF-8'), ('LC_PAPER', 'ru_RU.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/galactic')]), 'shell': False}
+[5.813767] (-) TimerEvent: {}
+[5.815524] (image_vis) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.816008] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/lib/image_vis/image_viewer_node\n'}
+[5.816504] (image_vis) StdoutLine: {'line': b'-- Set runtime path of "/home/vlad/ros2_ws/image_vis/install/image_vis/lib/image_vis/image_viewer_node" to ""\n'}
+[5.816697] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/package_run_dependencies/image_vis\n'}
+[5.817398] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/parent_prefix_path/image_vis\n'}
+[5.817521] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/ament_prefix_path.sh\n'}
+[5.817601] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/ament_prefix_path.dsv\n'}
+[5.818562] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/path.sh\n'}
+[5.818673] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/environment/path.dsv\n'}
+[5.818766] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.bash\n'}
+[5.818860] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.sh\n'}
+[5.818926] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.zsh\n'}
+[5.818991] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/local_setup.dsv\n'}
+[5.819069] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/package.dsv\n'}
+[5.819145] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/ament_index/resource_index/packages/image_vis\n'}
+[5.819262] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/cmake/image_visConfig.cmake\n'}
+[5.819337] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/cmake/image_visConfig-version.cmake\n'}
+[5.819402] (image_vis) StdoutLine: {'line': b'-- Installing: /home/vlad/ros2_ws/image_vis/install/image_vis/share/image_vis/package.xml\n'}
+[5.823860] (image_vis) CommandEnded: {'returncode': 0}
+[5.866012] (image_vis) JobEnded: {'identifier': 'image_vis', 'rc': 0}
+[5.867080] (-) EventReactorShutdown: {}

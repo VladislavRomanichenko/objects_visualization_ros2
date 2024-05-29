@@ -1,0 +1,70 @@
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:57:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   57 |     ([01;35m[K31[m[K, 119, 180),   // tab:blue
+      |      [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:57:15:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   57 |     (31, 119, [01;35m[K180[m[K),   // tab:blue
+      |               [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:58:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   58 |     ([01;35m[K255[m[K, 127, 14),   // tab:orange
+      |      [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:58:16:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   58 |     (255, 127, [01;35m[K14[m[K),   // tab:orange
+      |                [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:59:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   59 |     ([01;35m[K44[m[K, 160, 44),    // tab:green
+      |      [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:59:15:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   59 |     (44, 160, [01;35m[K44[m[K),    // tab:green
+      |               [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:60:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   60 |     ([01;35m[K214[m[K, 39, 40),    // tab:red
+      |      [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:60:15:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   60 |     (214, 39, [01;35m[K40[m[K),    // tab:red
+      |               [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:61:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   61 |     ([01;35m[K148[m[K, 103, 189),  // tab:purple
+      |      [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:61:16:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   61 |     (148, 103, [01;35m[K189[m[K),  // tab:purple
+      |                [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:62:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   62 |     ([01;35m[K140[m[K, 86, 75),    // tab:brown
+      |      [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:62:15:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   62 |     (140, 86, [01;35m[K75[m[K),    // tab:brown
+      |               [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:63:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   63 |     ([01;35m[K227[m[K, 119, 194),  // tab:pink
+      |      [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:63:16:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   63 |     (227, 119, [01;35m[K194[m[K),  // tab:pink
+      |                [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:64:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   64 |     ([01;35m[K127[m[K, 127, 127),  // tab:gray
+      |      [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:64:16:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   64 |     (127, 127, [01;35m[K127[m[K),  // tab:gray
+      |                [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:65:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   65 |     ([01;35m[K188[m[K, 189, 34),   // tab:olive
+      |      [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:65:16:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   65 |     (188, 189, [01;35m[K34[m[K),   // tab:olive
+      |                [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:66:6:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   66 |     ([01;35m[K23[m[K, 190, 207),   // tab:cyan
+      |      [01;35m[K^~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:66:15:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   66 |     (23, 190, [01;35m[K207[m[K),   // tab:cyan
+      |               [01;35m[K^~~[m[K
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:[m[K In function ‘[01m[Kcv::Scalar random_color(int)[m[K’:
+[01m[K/home/vlad/ros2_ws/image_vis/src/image_viewer_node.cpp:70:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   70 |     return COLOR_TABLE[id % COLOR_TABLE.size()]
+      |                                                [01;31m[K^[m[K
+      |                                                [32m[K;[m[K
+   71 | [32m[K}[m[K
+      | [32m[K~[m[K                                               
+make[2]: *** [CMakeFiles/image_viewer_node.dir/build.make:63: CMakeFiles/image_viewer_node.dir/src/image_viewer_node.cpp.o] Ошибка 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/image_viewer_node.dir/all] Ошибка 2
+make: *** [Makefile:141: all] Ошибка 2
