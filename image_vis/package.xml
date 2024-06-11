@@ -4,7 +4,10 @@
   <name>image_vis</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="vladislavromanichenko@yandex.ru">vlad</maintainer>
+  <maintainer email="chepsiilya@gmail.com">Shepel Ilya</maintainer>
+  <maintainer email="dandur.oak@gmail.com">Danil Tolkachev</maintainer>
+  <maintainer email="vladislavromanichenko@yandex.ru">Vladislav Romanichenko</maintainer>
+  
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

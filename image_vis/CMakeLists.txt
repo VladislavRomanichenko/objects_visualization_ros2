@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
-project(image_vis)
+project(image_vis VERSION 1.0.0)
+
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -18,11 +22,11 @@ find_package(tf2_ros REQUIRED)
 
 include_directories(${EIGEN3_INCLUDE_DIR})
 
-add_executable(image_viewer_node src/draw_objects.cpp)
-ament_target_dependencies(image_viewer_node rclcpp sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3)
+add_executable(draw_objects src/draw_objects.cpp)
+ament_target_dependencies(draw_objects rclcpp sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3)
 
 install(TARGETS
-  image_viewer_node
+  draw_objects
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

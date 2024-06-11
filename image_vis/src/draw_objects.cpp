@@ -1,8 +1,17 @@
-#include "./utils.hpp"
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/image.hpp>
+#include <sensor_msgs/msg/camera_info.hpp>
+#include <cv_bridge/cv_bridge.h>
+#include <image_transport/image_transport.hpp>
+
+#include <message_filters/subscriber.h>
+#include <message_filters/time_synchronizer.h>
+#include <message_filters/sync_policies/approximate_time.h>
+#include "./utils.cpp"
 
 class ImageViewerNode : public rclcpp::Node {
 public:
-    ImageViewerNode() : Node("image_viewer_node") {
+    ImageViewerNode() : Node("draw_objects") {
 
         //Declare parameter for function
         this->declare_parameter<bool>("visualize", true);

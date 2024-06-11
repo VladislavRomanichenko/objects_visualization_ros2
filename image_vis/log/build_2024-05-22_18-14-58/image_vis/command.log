@@ -1,4 +1,0 @@
-Invoking command in '/home/vlad/ros2_ws/image_vis/build/image_vis': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/vlad/ros2_ws/image_vis/build/image_vis -- -j4 -l4
-Invoked command in '/home/vlad/ros2_ws/image_vis/build/image_vis' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/vlad/ros2_ws/image_vis/build/image_vis -- -j4 -l4
-Invoking command in '/home/vlad/ros2_ws/image_vis/build/image_vis': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/vlad/ros2_ws/image_vis/build/image_vis
-Invoked command in '/home/vlad/ros2_ws/image_vis/build/image_vis' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/vlad/ros2_ws/image_vis/build/image_vis
