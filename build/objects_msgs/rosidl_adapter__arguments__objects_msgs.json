@@ -1,0 +1,12 @@
+{
+  "package_name": "objects_msgs",
+  "non_idl_tuples": [
+    "/home/vlad/ros2_ws/objects_msgs:msg/DynamicObject.msg",
+    "/home/vlad/ros2_ws/objects_msgs:msg/DynamicObjectArray.msg",
+    "/home/vlad/ros2_ws/objects_msgs:msg/Object.msg",
+    "/home/vlad/ros2_ws/objects_msgs:msg/Object2D.msg",
+    "/home/vlad/ros2_ws/objects_msgs:msg/Object2DArray.msg",
+    "/home/vlad/ros2_ws/objects_msgs:msg/ObjectArray.msg",
+    "/home/vlad/ros2_ws/objects_msgs:msg/ObjectLabel.msg"
+  ]
+}

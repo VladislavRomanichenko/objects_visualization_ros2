@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from objects_msgs/msg/ObjectLabel.msg
+// generated code does not contain a copyright notice
+
+
+module objects_msgs {
+  module msg {
+    module ObjectLabel_Constants {
+      const uint8 VEHICLE = 0;
+      const uint8 PEDESTRIAN = 1;
+      const uint8 CYCLIST = 2;
+    };
+    @verbatim (language="comment", text=
+      " label types (according to CenterPoint Waymo pipeline)")
+    struct ObjectLabel {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

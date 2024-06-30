@@ -1,0 +1,14 @@
+msg/DynamicObject.idl
+msg/DynamicObject.msg
+msg/DynamicObjectArray.idl
+msg/DynamicObjectArray.msg
+msg/Object.idl
+msg/Object.msg
+msg/Object2D.idl
+msg/Object2D.msg
+msg/Object2DArray.idl
+msg/Object2DArray.msg
+msg/ObjectArray.idl
+msg/ObjectArray.msg
+msg/ObjectLabel.idl
+msg/ObjectLabel.msg

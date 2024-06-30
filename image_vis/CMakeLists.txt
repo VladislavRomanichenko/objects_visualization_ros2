@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.5)
 project(image_vis VERSION 1.0.0)
 
 if(NOT CMAKE_CXX_STANDARD)
@@ -19,14 +19,24 @@ find_package(objects_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(visualization_msgs REQUIRED)
+find_package(rosidl_typesupport_cpp REQUIRED)
 
 include_directories(${EIGEN3_INCLUDE_DIR})
 
-add_executable(draw_objects src/draw_objects.cpp)
+add_executable(draw_objects src/draw_objects.cpp src/utils.cpp)
 ament_target_dependencies(draw_objects rclcpp sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3)
+
+add_executable(draw_objects3d src/draw_objects3d.cpp src/utils.cpp)
+ament_target_dependencies(draw_objects3d rclcpp sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3)
+
+add_executable(objects2markers src/objects2markers.cpp src/utils.cpp)
+ament_target_dependencies(objects2markers rclcpp sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3 visualization_msgs rosidl_typesupport_cpp)
 
 install(TARGETS
   draw_objects
+  draw_objects3d
+  objects2markers
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
