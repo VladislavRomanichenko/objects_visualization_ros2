@@ -1,7 +1,0 @@
-/home/vlad/ros2_ws/build/objects_msgs/rosidl_adapter/objects_msgs:msg/DynamicObject.idl
-/home/vlad/ros2_ws/build/objects_msgs/rosidl_adapter/objects_msgs:msg/DynamicObjectArray.idl
-/home/vlad/ros2_ws/build/objects_msgs/rosidl_adapter/objects_msgs:msg/Object.idl
-/home/vlad/ros2_ws/build/objects_msgs/rosidl_adapter/objects_msgs:msg/Object2D.idl
-/home/vlad/ros2_ws/build/objects_msgs/rosidl_adapter/objects_msgs:msg/Object2DArray.idl
-/home/vlad/ros2_ws/build/objects_msgs/rosidl_adapter/objects_msgs:msg/ObjectArray.idl
-/home/vlad/ros2_ws/build/objects_msgs/rosidl_adapter/objects_msgs:msg/ObjectLabel.idl

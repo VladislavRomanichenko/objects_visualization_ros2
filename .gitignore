@@ -1,6 +1,6 @@
 __pycache__
 *.pyc
-*log/
-*install/
-*build/
+log/
+install/
+build/
 *.vscode/
