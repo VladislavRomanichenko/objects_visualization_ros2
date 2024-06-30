@@ -1,13 +1,11 @@
 <launch>
-    <!-- 
-    <node pkg="image_vis" exec="publish_random_objects" name="publish_random_objects" output="screen">
+    <node pkg="objects_vis" exec="publish_random_objects" name="publish_random_objects" output="screen">
         <remap from="image" to="image" />
         <remap from="objects2d" to="objects2d" />
         <param name="nclasses" value="5" />
     </node>
-    -->
 
-    <node pkg="image_vis" exec="draw_objects" name="draw_objects" output="screen">
+    <node pkg="objects_vis" exec="draw_objects" name="draw_objects" output="screen">
         <remap from="image" to="image" />
         <remap from="objects2d" to="objects2d" />
         <param name="visualize" value="true" />
@@ -18,7 +16,7 @@
         <param name="label_fmt" value="#{id} {label} ({cls}) {score:.2f}" type="str" />
     </node> 
 
-    <node pkg="image_vis" exec="draw_objects3d" name="draw_objects3d" output="screen">
+    <node pkg="objects_vis" exec="draw_objects3d" name="draw_objects3d" output="screen">
         <remap from="image" to="image" />
         <remap from="objects3d" to="objects3d" />
         <param name="visualize" value="true" />
@@ -26,12 +24,12 @@
         <param name="approximate_sync" value="false" />
     </node>
 
-    <!-- <node pkg="image_vis" exec="objects2markers" name="objects2markers" output="screen">
+    <node pkg="objects_vis" exec="objects2markers" name="objects2markers" output="screen">
         <remap from="objects" to="objects3d" />
         <param name="color" value="id" type="str" />
         <param name="classes" value="['car', 'person', 'sign', 'light', 'trash']" type="yaml" />
         <param name="label_fmt" value="#{id} {label} ({cls}) {score:.2f}" type="str" />
     </node>
 
-    <node name="rviz" pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share image_vis)/config/random_objects.rviz" /> -->
+    <node name="rviz" pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share objects_vis)/config/random_objects.rviz" />
 </launch>

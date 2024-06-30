@@ -188,18 +188,6 @@ cv::Vec3b object_color(int32_t label, int32_t id, std::string color){
 }
 
 
-std::unordered_map<std::string, std::string> get_fields_and_field_types() {
-      return {
-          {"id", "int"},
-          {"label", "int"},
-          {"x", "int"},
-          {"y", "int"},
-          {"width", "int"},   
-          {"height", "int"},
-      };
-  }
-
-
 std::string object_label(float score,
                         int32_t label_object,
                         int32_t id,
@@ -263,6 +251,7 @@ void drawRect(cv::Mat &image,
     }
 
     cv::rectangle(image, p0, p1, color, thickness);
+    
     if (!label.empty()) {
         cv::rectangle(image, label_p0, label_p1, color, cv::FILLED);
         cv::rectangle(image, label_p0, label_p1, color, thickness);
@@ -355,6 +344,8 @@ std_msgs::msg::ColorRGBA to_ColorRGBA(const cv::Vec3b& arr) {
     color.a = 1.0;
     return color;
 }
+
+
 std::vector<visualization_msgs::msg::Marker> create_markers(const objects_msgs::msg::Object &obj, 
                                                             const std_msgs::msg::Header &header, 
                                                             const std_msgs::msg::ColorRGBA &color, 
