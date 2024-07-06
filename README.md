@@ -4,6 +4,9 @@
 - OpenCV
 - Eigen3
 
+![image](https://github.com/VladislavRomanichenko/objects_visualization_ros2/assets/131472248/04802009-a285-401b-99be-a7ce923edaca)
+
+
 ## Usage
 
 ### Install
