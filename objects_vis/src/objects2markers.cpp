@@ -9,7 +9,7 @@ namespace objects2markers{
         this->initializeParameter();
         
         obj_sub_ = this->create_subscription<objects_msgs::msg::ObjectArray>(
-            "/detection/objects3d", rclcpp::QoS(10),
+            "/objects3d", rclcpp::QoS(10),
             [this](const objects_msgs::msg::ObjectArray::ConstSharedPtr msg) {
                 this->MarkersCallback(msg);
             });
@@ -31,7 +31,8 @@ namespace objects2markers{
     }
 
 
-    void Objects2Markers::MarkersCallback(const objects_msgs::msg::ObjectArray::ConstSharedPtr& objects) {
+    void Objects2Markers::MarkersCallback(const objects_msgs::msg::ObjectArray::ConstSharedPtr& objects) 
+    {
         if(marker_pub_->get_subscription_count() == 0){
             return;
         }
@@ -53,7 +54,8 @@ namespace objects2markers{
     }   
 }//namespace objects2markers
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv) 
+{
     rclcpp::init(argc, argv);
     rclcpp::NodeOptions node_options;
     rclcpp::spin(std::make_shared<objects2markers::Objects2Markers>(node_options));

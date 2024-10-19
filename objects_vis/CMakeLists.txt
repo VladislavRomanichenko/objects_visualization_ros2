@@ -10,18 +10,28 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
+
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_components REQUIRED)
+
+find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(objects_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
+
 find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
+
 find_package(OpenCV REQUIRED)
-find_package(objects_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
-find_package(geometry_msgs REQUIRED)
+
 find_package(tf2_ros REQUIRED)
-find_package(visualization_msgs REQUIRED)
+find_package(tf2 REQUIRED)
 find_package(rosidl_typesupport_cpp REQUIRED)
+
+find_package(message_filters REQUIRED)
+
 
 include_directories(${EIGEN3_INCLUDE_DIR})
 
@@ -96,6 +106,8 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 #   DESTINATION lib/${PROJECT_NAME}
 #)
 
+
+#----------------------------------------------------------------------------------------------
 #ADD draw_objects_component
 add_library(draw_objects_component SHARED 
             src/draw_objects.cpp 
@@ -113,13 +125,25 @@ target_include_directories(draw_objects_component PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-ament_target_dependencies(draw_objects_component rclcpp rclcpp_components sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3)
+ament_target_dependencies(draw_objects_component 
+                          rclcpp 
+                          rclcpp_components 
+                          sensor_msgs 
+                          cv_bridge 
+                          image_transport 
+                          OpenCV 
+                          objects_msgs 
+                          geometry_msgs 
+                          tf2_ros 
+                          Eigen3)
 
 install(TARGETS draw_objects_component
   EXPORT export_${PROJECT_NAME}
   DESTINATION lib
 )
 
+
+#----------------------------------------------------------------------------------------------
 #ADD draw_objects3d_component
 add_library(draw_objects3d_component SHARED 
             src/draw_objects3d.cpp 
@@ -137,13 +161,25 @@ target_include_directories(draw_objects3d_component PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-ament_target_dependencies(draw_objects3d_component rclcpp rclcpp_components sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3)
+ament_target_dependencies(draw_objects3d_component 
+                          rclcpp 
+                          rclcpp_components 
+                          sensor_msgs 
+                          cv_bridge 
+                          image_transport 
+                          OpenCV 
+                          objects_msgs 
+                          geometry_msgs 
+                          tf2_ros 
+                          Eigen3)
 
 install(TARGETS draw_objects3d_component
   EXPORT export_${PROJECT_NAME}
   DESTINATION lib
 )
 
+
+#----------------------------------------------------------------------------------------------
 #ADD objects2markers_component
 add_library(objects2markers_component SHARED 
             src/objects2markers.cpp 
@@ -161,7 +197,19 @@ target_include_directories(objects2markers_component PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-ament_target_dependencies(objects2markers_component rclcpp rclcpp_components sensor_msgs cv_bridge image_transport OpenCV objects_msgs geometry_msgs tf2_ros Eigen3 visualization_msgs rosidl_typesupport_cpp)
+ament_target_dependencies(objects2markers_component 
+                          rclcpp 
+                          rclcpp_components 
+                          sensor_msgs 
+                          cv_bridge 
+                          image_transport 
+                          OpenCV 
+                          objects_msgs 
+                          geometry_msgs 
+                          tf2_ros 
+                          Eigen3 
+                          visualization_msgs 
+                          rosidl_typesupport_cpp)
 
 install(TARGETS objects2markers_component
   EXPORT export_${PROJECT_NAME}
@@ -169,6 +217,46 @@ install(TARGETS objects2markers_component
 )
 
 
+#----------------------------------------------------------------------------------------------
+#ADD draw_centerpoint_component
+add_library(draw_centerpoint_component SHARED 
+            src/draw_centerpoint.cpp)
+
+rclcpp_components_register_nodes(draw_centerpoint_component "draw_centerpoint_cpp::CenterpointVisualization")
+
+target_compile_definitions(draw_centerpoint_component
+  PRIVATE "DRAW_CENTERPOINT_OBJECTS_CPP_ROS_BUILDING_LIBRARY"
+)
+target_compile_options(draw_centerpoint_component PUBLIC -Wall)
+target_include_directories(draw_centerpoint_component PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<BUILD_INTERFACE:${EIGEN3_INCLUDE_DIR}>
+  $<INSTALL_INTERFACE:include>
+)
+
+ament_target_dependencies(draw_centerpoint_component 
+                          rclcpp 
+                          tf2 
+                          rclcpp_components 
+                          message_filters 
+                          sensor_msgs 
+                          cv_bridge 
+                          image_transport 
+                          OpenCV 
+                          visualization_msgs 
+                          objects_msgs 
+                          geometry_msgs 
+                          std_msgs 
+                          tf2_ros 
+                          Eigen3)
+
+install(TARGETS draw_centerpoint_component
+  EXPORT export_${PROJECT_NAME}
+  DESTINATION lib
+)
+
+
+#----------------------------------------------------------------------------------------------
 # launch, param, etc...
 install(DIRECTORY
   launch

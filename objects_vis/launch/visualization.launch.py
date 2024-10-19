@@ -31,6 +31,13 @@ def generate_launch_description():
                     name='objects2markers',
                     #parameters=[{'param_name': 'param_value'}],
                 ),
+
+                ComposableNode(
+                    package='objects_vis',
+                    plugin='draw_centerpoint_cpp::CenterpointVisualization',
+                    name='draw_centerpoint',
+                    #parameters=[{'param_name': 'param_value'}],
+                ),
             
             ],
             output='screen',

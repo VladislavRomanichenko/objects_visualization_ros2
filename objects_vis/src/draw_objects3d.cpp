@@ -12,9 +12,9 @@ namespace draw_objects3d_cpp{
         this->initializeParameter();
 
         //Declare topic name and getting these parameters
-        this->declare_parameter<std::string>("sub_objects_topic_name", "/detection/objects3d");
-        this->declare_parameter<std::string>("sub_image_topic_name", "/viz/image_tracks");
-        this->declare_parameter<std::string>("sub_camera_info_topic_name", "/sensum/left/camera_info");
+        this->declare_parameter<std::string>("sub_objects_topic_name", "/objects3d");
+        this->declare_parameter<std::string>("sub_image_topic_name", "/image");
+        this->declare_parameter<std::string>("sub_camera_info_topic_name", "/camera_info");
         this->declare_parameter<std::string>("pub_objects3d_visualisation_topic_name", "objects3d_vis_topic");
         
         std::string sub_objects_topic_name = this->get_parameter("sub_objects_topic_name").get_parameter_value().get<std::string>();
