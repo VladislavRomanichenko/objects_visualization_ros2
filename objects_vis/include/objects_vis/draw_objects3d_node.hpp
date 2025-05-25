@@ -6,7 +6,7 @@
 #include <tf2_ros/transform_listener.h>
 #include <tf2_ros/buffer.h>
 #include <tf2/transform_datatypes.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 #include <cv_bridge/cv_bridge.h>
 #include <image_transport/image_transport.hpp>
@@ -21,19 +21,17 @@
 #include <objects_msgs/msg/object_array.hpp>
 #include <opencv2/opencv.hpp>
 
-#include "../include/utils.hpp"
+#include <objects_vis/utils.hpp>
 
-namespace draw_objects3d_cpp{
+namespace objects_vis{
 
-    class DrawObjects3DNode : public rclcpp::Node {
+    class DrawObjects3D : public rclcpp::Node {
     public:
-        DrawObjects3DNode(const rclcpp::NodeOptions& options);
+    DrawObjects3D(const rclcpp::NodeOptions& options);
 
     private:
-        void initializeParameter();
-        
-        void combinedCallback(const sensor_msgs::msg::CameraInfo::ConstSharedPtr &cam_info, 
-                        const sensor_msgs::msg::Image::ConstSharedPtr &msg_image, 
+        void callback(const sensor_msgs::msg::CameraInfo::ConstSharedPtr &cam_info,
+                        const sensor_msgs::msg::Image::ConstSharedPtr &msg_image,
                         const objects_msgs::msg::ObjectArray::ConstSharedPtr &msg_objects);
 
         std::shared_ptr<tf2_ros::Buffer> tf_buffer;
@@ -48,10 +46,10 @@ namespace draw_objects3d_cpp{
         //Declaring variables for publisher
         image_transport::Publisher objects_vis_pub;
 
-        std::string sub_objects_topic_name;
-        std::string sub_image_topic_name;
-        std::string sub_camera_info_topic_name;
-        std::string pub_objects3d_visualisation_topic_name;
+        std::string image_topic;
+        std::string objects3d_topic;
+        std::string camera_info_topic;
+        std::string pub_topic;
 
         std::string color;
         std::string label_fmt;
@@ -67,4 +65,4 @@ namespace draw_objects3d_cpp{
         bool visualize;
         bool approximate_sync;
     };
-}//namespace draw_objects3d_cpp
+}//namespace objects_vis

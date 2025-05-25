@@ -1,37 +1,30 @@
-#include "../include/objects2markers.hpp"
+#include <objects_vis/objects2markers_node.hpp>
 
-namespace objects2markers{
-
+namespace objects_vis{
 
     Objects2Markers::Objects2Markers(const rclcpp::NodeOptions &options)
-      : rclcpp::Node("draw_objects3d", options)
-    {
-        this->initializeParameter();
-        
-        obj_sub_ = this->create_subscription<objects_msgs::msg::ObjectArray>(
-            "/objects3d", rclcpp::QoS(10),
-            [this](const objects_msgs::msg::ObjectArray::ConstSharedPtr msg) {
-                this->MarkersCallback(msg);
-            });
-        
-        marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("markers", 10);
-    }
-
-
-    void Objects2Markers::initializeParameter()
+        : rclcpp::Node("objects2markers", options)
     {
         //Declare parameter for function
         this->declare_parameter<std::string>("color", "label");
         this->declare_parameter<std::string>("label_fmt", "{label}");
         this->declare_parameter<std::vector<std::string>>("classes", std::vector<std::string>(10, "unknown"));
-        
+
         color = this->get_parameter("color").as_string();
         label_fmt = this->get_parameter("label_fmt").as_string();
-        classes = this->get_parameter("classes").as_string_array();    
+        classes = this->get_parameter("classes").as_string_array();
+
+        obj_sub_ = this->create_subscription<objects_msgs::msg::ObjectArray>(
+            "objects3d", rclcpp::QoS(10),
+            [this](const objects_msgs::msg::ObjectArray::ConstSharedPtr msg) {
+                this->MarkersCallback(msg);
+            });
+
+        marker_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("markers", 10);
     }
 
 
-    void Objects2Markers::MarkersCallback(const objects_msgs::msg::ObjectArray::ConstSharedPtr& objects) 
+    void Objects2Markers::MarkersCallback(const objects_msgs::msg::ObjectArray::ConstSharedPtr& objects)
     {
         if(marker_pub_->get_subscription_count() == 0){
             return;
@@ -51,18 +44,9 @@ namespace objects2markers{
             }
             marker_pub_->publish(markers);
         }
-    }   
-}//namespace objects2markers
+    }
+}//namespace objects_vis
 
-int main(int argc, char **argv) 
-{
-    rclcpp::init(argc, argv);
-    rclcpp::NodeOptions node_options;
-    rclcpp::spin(std::make_shared<objects2markers::Objects2Markers>(node_options));
-    rclcpp::shutdown();
-    cv::destroyAllWindows();
-    return 0;
-}
 
 #include <rclcpp_components/register_node_macro.hpp>
 /*
@@ -70,4 +54,4 @@ int main(int argc, char **argv)
    This acts as a sort of entry point, allowing the component to be discoverable
    when its library is being loaded into a running process.
 */
-RCLCPP_COMPONENTS_REGISTER_NODE(objects2markers::Objects2Markers)
+RCLCPP_COMPONENTS_REGISTER_NODE(objects_vis::Objects2Markers)

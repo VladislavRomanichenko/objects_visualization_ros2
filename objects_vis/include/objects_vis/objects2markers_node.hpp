@@ -7,9 +7,9 @@
 #include <visualization_msgs/msg/marker_array.hpp>
 #include <objects_msgs/msg/object_array.hpp>
 
-#include "../include/utils.hpp"
+#include <objects_vis/utils.hpp>
 
-namespace objects2markers{
+namespace objects_vis{
 
     using namespace std::chrono_literals;
 
@@ -18,8 +18,6 @@ namespace objects2markers{
         Objects2Markers(const rclcpp::NodeOptions& options);
 
     private:
-        void initializeParameter();
-
         void MarkersCallback(const objects_msgs::msg::ObjectArray::ConstSharedPtr& objects);
 
         std::string color;
@@ -29,4 +27,4 @@ namespace objects2markers{
         rclcpp::Subscription<objects_msgs::msg::ObjectArray>::SharedPtr obj_sub_;
         rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr marker_pub_;
     };
-}//namespace objects2markers
+}//namespace objects_vis

@@ -1,14 +1,13 @@
-#include "../include/utils.hpp"
-//#include "./utils.hpp"
+#include <objects_vis/utils.hpp>
 
 Rect_::Rect_(int x, int y, int width, int height) : x(x), y(y), width(width), height(height) {}
 
-cv::Point Rect_::tl()  { 
-    return cv::Point(cvRound(x), cvRound(y)); 
+cv::Point Rect_::tl()  {
+    return cv::Point(cvRound(x), cvRound(y));
 }
 
-cv::Point Rect_::br()  { 
-    return cv::Point(cvRound(x + width), cvRound(y + height)); 
+cv::Point Rect_::br()  {
+    return cv::Point(cvRound(x + width), cvRound(y + height));
 }
 
 
@@ -62,7 +61,7 @@ geometry_msgs::msg::Pose Pose_from_Rt(const Matrix4 &Rt) {
 void transform_object(objects_msgs::msg::Object object, const geometry_msgs::msg::TransformStamped &tf) {
     Matrix4 Rt_tf = Rt_from_Transform(tf);
     Matrix4 Rt_pose = Rt_from_Pose(object.pose);
-    
+
     object.pose = Pose_from_Rt(Rt_tf * Rt_pose);
 }
 
@@ -86,17 +85,21 @@ void set_object_yaw(objects_msgs::msg::Object object, double yaw, bool camera_fr
 
 
 double get_object_yaw(objects_msgs::msg::Object object, bool camera_frame) {
-    
-    Quaterniond quat(object.pose.orientation.w, 
-                    object.pose.orientation.x, 
-                    object.pose.orientation.y, 
+
+    Quaterniond quat(object.pose.orientation.w,
+                    object.pose.orientation.x,
+                    object.pose.orientation.y,
                     object.pose.orientation.z);
 
     if (camera_frame) {
         Eigen::Matrix3d R = quat.toRotationMatrix();
         return std::atan2(-R(0, 0), -R(0, 1));
     } else {
-        return std::atan2(object.pose.orientation.z, object.pose.orientation.w);
+        double x = object.pose.orientation.x;
+        double y = object.pose.orientation.y;
+        double z = object.pose.orientation.z;
+        double w = object.pose.orientation.w;
+        return std::atan2(2.0 * (w * z + x * y), 1.0 - 2.0 * (y * y + z * z));
     }
 }
 
@@ -146,7 +149,7 @@ cv::Mat eigenVectorsToCvMat(const std::vector<Eigen::Vector3d>& eigenVecs) {
 
 CameraInfoMatrices cam_info_to_matrices(const sensor_msgs::msg::CameraInfo& cam_info) {
     CameraInfoMatrices matrices;
-    
+
     matrices.K = Eigen::Map<const Eigen::Matrix<double, 3, 3>>(cam_info.k.data());
     matrices.D = Eigen::Map<const Eigen::VectorXd>(cam_info.d.data(), cam_info.d.size());
     matrices.R = Eigen::Map<const Eigen::Matrix<double, 3, 3>>(cam_info.r.data());
@@ -159,16 +162,16 @@ CameraInfoMatrices cam_info_to_matrices(const sensor_msgs::msg::CameraInfo& cam_
 cv::Vec3b random_color(int seed) {
   const int NCOLORS = 10;
   static cv::Vec3b COLOR_TABLE[NCOLORS] = {
-      cv::Vec3b(180, 119, 31),   
-      cv::Vec3b(14, 127, 255),   
-      cv::Vec3b(44, 160, 44),    
-      cv::Vec3b(40, 39, 214),    
-      cv::Vec3b(189, 103, 148),  
-      cv::Vec3b(75, 86, 140),    
-      cv::Vec3b(194, 119, 227),  
-      cv::Vec3b(127, 127, 127),  
-      cv::Vec3b(34, 189, 188),   
-      cv::Vec3b(207, 190, 23),   
+      cv::Vec3b(180, 119, 31),
+      cv::Vec3b(14, 127, 255),
+      cv::Vec3b(44, 160, 44),
+      cv::Vec3b(40, 39, 214),
+      cv::Vec3b(189, 103, 148),
+      cv::Vec3b(75, 86, 140),
+      cv::Vec3b(194, 119, 227),
+      cv::Vec3b(127, 127, 127),
+      cv::Vec3b(34, 189, 188),
+      cv::Vec3b(207, 190, 23),
 
   };
   return COLOR_TABLE[seed % NCOLORS];
@@ -189,31 +192,38 @@ cv::Vec3b object_color(int32_t label, int32_t id, std::string color){
 
 
 std::string object_label(float score,
-                        int32_t label_object,
-                        int32_t id,
-                        std::string label_fmt, 
-                        std::vector<std::string> classes) {
+    int32_t label_object,
+    int32_t id,
+    const std::string& label_fmt,
+    const std::vector<std::string>& classes) {
     if (label_fmt.empty()) {
         return "";
     }
 
     std::unordered_map<std::string, std::string> obj_dict;
-
-    std::stringstream label_ss;
-    auto label = label_fmt;
-
-    if (label.find("{id}") != std::string::npos) {
-        label_ss << id << " ";
-    } 
-    if (label.find("{label}") != std::string::npos) {
-        label_ss << classes[label_object] << " ";
+    obj_dict["id"] = std::to_string(id);
+    obj_dict["label"] = std::to_string(label_object);
+    std::stringstream score_ss;
+    score_ss << std::fixed << std::setprecision(2) << score;
+    obj_dict["score"] = score_ss.str();
+    
+    if (!classes.empty() && label_object < static_cast<int32_t>(classes.size())) {
+        obj_dict["cls"] = classes[label_object];
+    } else {
+        obj_dict["cls"] = "unknown" + std::to_string(label_object);
     }
-    if (label.find("{score}") != std::string::npos) {
-        
-        label_ss << std::fixed << std::setprecision(2) << score << " ";
-    }   
 
-    return label_ss.str();
+    std::string result = label_fmt;
+    for (const auto& [key, value] : obj_dict) {
+        std::string placeholder = "{" + key + "}";
+        size_t pos = result.find(placeholder);
+        
+        while (pos != std::string::npos) {
+            result.replace(pos, placeholder.length(), value);
+            pos = result.find(placeholder, pos + value.length());
+        }
+    }
+    return result;
 }
 
 
@@ -222,11 +232,11 @@ Rect_ object_rect(objects_msgs::msg::Object2D &object){
 }
 
 
-void drawRect(cv::Mat &image, 
-            cv::Point p0, 
-            cv::Point p1, 
-            cv::Vec3b color, 
-            std::string label, 
+void drawRect(cv::Mat &image,
+            cv::Point p0,
+            cv::Point p1,
+            cv::Vec3b color,
+            std::string label,
             double font_scale){
     int font_type = cv::FONT_HERSHEY_PLAIN;
     int font_weight = cvRound(font_scale);
@@ -251,20 +261,20 @@ void drawRect(cv::Mat &image,
     }
 
     cv::rectangle(image, p0, p1, color, thickness);
-    
+
     if (!label.empty()) {
         cv::rectangle(image, label_p0, label_p1, color, cv::FILLED);
         cv::rectangle(image, label_p0, label_p1, color, thickness);
         cv::putText(image, label, text_org, font_type, font_scale, text_color, font_weight, cv::LINE_AA);
-    }    
+    }
 }
 
 
-void drawObject(cv::Mat &image, 
-                objects_msgs::msg::Object2D object, 
-                std::string color, 
-                std::string label_fmt, 
-                std::vector<std::string> classes, 
+void drawObject(cv::Mat &image,
+                objects_msgs::msg::Object2D object,
+                std::string color,
+                std::string label_fmt,
+                std::vector<std::string> classes,
                 double font_scale){
     cv::Vec3b result_color = object_color(object.label, object.id, color);
     std::string result_label = object_label(object.score, object.label, object.id, label_fmt, classes);
@@ -325,14 +335,14 @@ void draw_object3d(cv::Mat &img,
     cv::projectPoints(pts_mat, rvec, tvec, K_cv, D_cv, ipts);
 
     for (size_t i = 0; i < ipts.size(); ++i) {
-        ipts[i] = ipts[i] * 1.0; 
+        ipts[i] = ipts[i] * 1.0;
     }
 
     for (const auto &edge : EDGES_INDICES) {
         cv::Point p1(static_cast<int>(ipts[edge.first].x), static_cast<int>(ipts[edge.first].y));
         cv::Point p2(static_cast<int>(ipts[edge.second].x), static_cast<int>(ipts[edge.second].y));
         cv::line(img, p1, p2, color, line_width, cv::LINE_AA);
-    } 
+    }
 }
 
 
@@ -346,71 +356,123 @@ std_msgs::msg::ColorRGBA to_ColorRGBA(const cv::Vec3b& arr) {
 }
 
 
-std::vector<visualization_msgs::msg::Marker> create_markers(const objects_msgs::msg::Object &obj, 
-                                                            const std_msgs::msg::Header &header, 
-                                                            const std_msgs::msg::ColorRGBA &color, 
+std::vector<visualization_msgs::msg::Marker> create_markers(const objects_msgs::msg::Object &obj,
+                                                            const std_msgs::msg::Header &header,
+                                                            const std_msgs::msg::ColorRGBA &color,
                                                             const std::string &label) {
-  std::vector<visualization_msgs::msg::Marker> markers;
+    std::vector<visualization_msgs::msg::Marker> markers;
 
-  geometry_msgs::msg::Point p = obj.pose.position;
-  if (p.x == 0 && p.y == 0 && p.z == 0) {
-    return markers;
-  }
+    geometry_msgs::msg::Point p = obj.pose.position;
+    if (p.x == 0 && p.y == 0 && p.z == 0) {
+        return markers;
+    }
 
-  std_msgs::msg::ColorRGBA colora = color;
-  colora.a = 0.9;
+    std_msgs::msg::ColorRGBA colora = color;
+    colora.a = 0.9;
 
-  visualization_msgs::msg::Marker m;
-  m.header = header;
-  m.ns = "bbox";
-  m.action = visualization_msgs::msg::Marker::ADD;
-  m.type = visualization_msgs::msg::Marker::CUBE;
-  m.color = colora;
-  m.color.a = 0.5;
-  m.scale = obj.size;
-  m.pose = obj.pose;
-  m.id = obj.id;
-  markers.push_back(m);
+    visualization_msgs::msg::Marker m;
+    m.header = header;
+    m.ns = "bbox";
+    m.action = visualization_msgs::msg::Marker::ADD;
+    m.type = visualization_msgs::msg::Marker::CUBE;
+    m.color = colora;
+    m.color.a = 0.5;
+    m.scale = obj.size;
+    m.pose = obj.pose;
+    m.id = obj.id;
+    markers.push_back(m);
 
-  m = visualization_msgs::msg::Marker();
-  m.header = header;
-  m.id = obj.id;
-  m.color = colora;
-  m.ns = "edges";
-  m.type = visualization_msgs::msg::Marker::LINE_LIST;
-  m.scale.x = 0.05;
-  m.pose.orientation.w = 1.0;
-  auto pts = object_points(obj);
-  for (const auto &edge : EDGES_INDICES) {
-    geometry_msgs::msg::Point point;
-    point.x = pts[edge.first](0);
-    point.y = pts[edge.first](1);
-    point.z = pts[edge.first](2);
-    m.points.push_back(point);
-    
-    point.x = pts[edge.second](0);
-    point.y = pts[edge.second](1);
-    point.z = pts[edge.second](2);
-    m.points.push_back(point);
-  }
-  markers.push_back(m);
-
-  if (!label.empty()) {
     m = visualization_msgs::msg::Marker();
     m.header = header;
-    m.ns = "label";
     m.id = obj.id;
-    m.action = visualization_msgs::msg::Marker::ADD;
-    m.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
-    m.text = label;
-    m.scale.z = 0.5;
-    m.color = color;
-    m.pose.position = obj.pose.position;
-    m.pose.position.y -= obj.size.y / 2 + 0.2;
-    markers.push_back(m);
-  }
+    m.color = colora;
+    m.ns = "edges";
+    m.type = visualization_msgs::msg::Marker::LINE_LIST;
+    m.scale.x = 0.05;
+    m.pose.orientation.w = 1.0;
+    auto pts = object_points(obj);
+    for (const auto &edge : EDGES_INDICES) {
+        geometry_msgs::msg::Point point;
+        point.x = pts[edge.first](0);
+        point.y = pts[edge.first](1);
+        point.z = pts[edge.first](2);
+        m.points.push_back(point);
 
-  return markers;
+        point.x = pts[edge.second](0);
+        point.y = pts[edge.second](1);
+        point.z = pts[edge.second](2);
+        m.points.push_back(point);
+    }
+    markers.push_back(m);
+
+    if (!label.empty()) {
+        m = visualization_msgs::msg::Marker();
+        m.header = header;
+        m.ns = "label";
+        m.id = obj.id;
+        m.action = visualization_msgs::msg::Marker::ADD;
+        m.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
+        m.text = label;
+        m.scale.z = 0.5;
+        m.color = color;
+        m.pose.position = obj.pose.position;
+        m.pose.position.y -= obj.size.y / 2 + 0.2;
+        markers.push_back(m);
+    }
+
+    return markers;
+}
+
+visualization_msgs::msg::Marker create_traj_marker(std_msgs::msg::Header header, 
+                                                    objects_msgs::msg::DynamicObject obj, 
+                                                    const std_msgs::msg::ColorRGBA& color)
+{
+    visualization_msgs::msg::Marker marker;
+    marker.header = header;
+    marker.ns = "predictor/previous_trajectory";
+    marker.id = obj.object.id;
+    marker.type = visualization_msgs::msg::Marker::POINTS;
+    marker.pose.orientation.w = 1.0;
+
+    marker.scale.x = 0.2;
+    marker.scale.y = 0.2;
+
+    if (obj.trajectory.size() > 0)
+    {
+        for (int i = 0; i < int(obj.trajectory.size()); i++)
+        {
+            marker.points.push_back(obj.trajectory[i].point);
+        }
+
+        marker.action = visualization_msgs::msg::Marker::ADD;
+        marker.color = color;
+    }
+    return marker;
+}
+
+
+visualization_msgs::msg::Marker create_pred_marker(std_msgs::msg::Header header, 
+                                                    objects_msgs::msg::DynamicObject obj, 
+                                                    const std_msgs::msg::ColorRGBA& color)
+{
+    visualization_msgs::msg::Marker marker;
+    marker.header = header;
+    marker.ns = "predictor/future_trajectory";
+    marker.id = obj.object.id;
+    marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
+    marker.pose.orientation.w = 1.0;
+    marker.scale.x = 0.2;
+
+    if (obj.prediction.size() > 1)
+    {
+        for (int i = 0; i < int(obj.prediction.size()); i++){
+            marker.points.push_back(obj.prediction[i].pose.position);
+        }    
+
+        marker.action = visualization_msgs::msg::Marker::ADD;
+        marker.color = color;
+    }
+    return marker;
 }
 
 
