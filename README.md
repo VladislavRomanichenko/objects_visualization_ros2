@@ -6,6 +6,7 @@
 
 ![photo_2024-06-28_16-52-10](https://github.com/VladislavRomanichenko/objects_visualization_ros2/assets/131472248/86a8f5c7-517e-40a5-827d-4bfbbd5870ef)
 
+<img width="1280" height="745" alt="image" src="https://github.com/user-attachments/assets/ef48c58e-2f90-48ed-80d3-16f66bf2812e" />
 
 
 ## Usage
